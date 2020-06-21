@@ -1,0 +1,6 @@
+const ENV_CONFIG = {
+    WEATHERBIT_KEY: 'ee025560f9af44509312804af069a9ec',
+    MAPBOX_KEY: 'pk.eyJ1IjoiYW1pdDk2IiwiYSI6ImNrYjJmczE5bTA3aDAzMHMwNmwxbW5zZDEifQ.XN5HM2HZWTImACh9kvt5BA'
+}
+
+module.exports = ENV_CONFIG;
