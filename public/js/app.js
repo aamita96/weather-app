@@ -1,13 +1,12 @@
 console.log('Client side javascript!');
 
 function fetchWeather(location) {
-    fetch('http://localhost:3000/weather?location=' + location).then((res) => {
+    fetch('/weather?location=' + location).then((res) => {
         res.json().then(data => {
             if (data.error) {
                 console.error(data.error);
                 message.innerHTML = data.error;
             } else {
-                console.log(data);
                 message.innerHTML = 
                 `
                 Location: ${data.location}

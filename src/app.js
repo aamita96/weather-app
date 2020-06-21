@@ -1,7 +1,9 @@
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
+
 const app = express();
+const port = process.env.PORT || 3000;
 
 // Required Weather Modules to fetch weather data
 const geocode = require('./utils/geocode');
@@ -28,7 +30,6 @@ app.get('', (req, res) => {
 app.get('/weather', (req, res) => {
 
         const { location } = req.query;
-        // console.log(location);
         if (!location) {
                 return res.send({
                         error: 'You must provide a location!',
@@ -71,6 +72,6 @@ app.get('*', (req, res) => {
         });
 });
 
-app.listen(3000, () => {
-        console.log('Server is up and running!');
+app.listen(port, () => {
+        console.log('Server is up and running on port ' + port);
 });
