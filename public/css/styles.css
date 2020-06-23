@@ -1,3 +1,13 @@
+.image-bg{
+    background-repeat: no-repeat;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0
+}
 body {
     color: #333;
     font-family: Arial, Helvetica, sans-serif;
@@ -10,6 +20,10 @@ body {
     min-height: 100vh;
 }
 .main-content {
+    flex-grow: 1;
+}
+.container{
+    position: relative;
     flex-grow: 1;
 }
 
@@ -39,3 +53,28 @@ header a {
 .portrait{
     width: 250px;
 }
+
+.form-control{
+    width: 200px;
+    border: 1px solid rgb(190, 189, 189);
+    border-radius: .25rem;
+    height: 20px;
+    font-size: 1rem;
+    padding: .354rem;
+    background-color: #fff;
+}
+.btn{
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: .390rem .75rem;
+    border-radius: .25rem;
+    background-color: #8888884d;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+    img.bg {
+      left: 50%;
+      margin-left: -512px;   /* 50% */
+    }
+  }
