@@ -7,13 +7,12 @@
     <link rel="icon" href="/img/weather.png">
 </head>
 
-<body>
-    <img src="/img/clouds.jpg" alt="" class="image-bg">
-    <div class="container">
+<body class="image-bg" style="--image-url: url('/img/clouds.jpg')">
+    <div class="main-content">
         {{>header}}
         <img src="/img/avatar.png" alt="" class="portrait">
-        {{>footer}}
     </div>
+    {{>footer}}
 </body>
 
 </html>

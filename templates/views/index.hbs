@@ -7,20 +7,18 @@
     <link rel="icon" href="/img/weather.png">
 </head>
 
-<body class="image-bg">
-    <img src="/img/clouds.jpg" alt="" class="image-bg">
-    <div class="container">
-        <div class="main-content">
-            {{>header}}
-            <p>Use this site to get your weather!</p>
-            <form>
-                <input type="text" placeholder="location" class="form-control">
-                <button class="btn">Search</button>
-            </form>
-            <p id="message"></p>
-        </div>
+<body class="image-bg" style="--image-url: url('/img/clouds.jpg')">
+
+    <div class="main-content">
+        {{>header}}
+        <p>Use this site to get your weather!</p>
+        <form>
+            <input type="text" placeholder="location" class="form-control">
+            <button class="btn">Search</button>
+        </form>
+        <p id="message"></p>
     </div>
-        {{>footer}}
+    {{>footer}}
 
     <script src="/js/app.js"></script>
 </body>
