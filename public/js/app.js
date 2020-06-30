@@ -7,11 +7,8 @@ function fetchWeather(location) {
                 console.error(data.error);
                 message.innerHTML = data.error;
             } else {
-                message.innerHTML = 
-                `
-                Location: ${data.location}
-                Forecast: ${data.forecastRes} 
-                `;
+                enteredLocation.innerHTML = `Location: ${data.location}`;
+                message.innerHTML = ` Forecast: ${data.forecastRes} `;
             }
         })
     }).catch(err => {
@@ -21,11 +18,13 @@ function fetchWeather(location) {
 
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
+const enteredLocation = document.querySelector('#location');
 const message = document.querySelector('#message');
 
 
 weatherForm.addEventListener('submit', (event) => {
     event.preventDefault();
+    enteredLocation.textContent = '';
     message.textContent = 'Loading....';
     
     const location = search.value;

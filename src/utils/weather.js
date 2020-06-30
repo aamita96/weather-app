@@ -8,8 +8,7 @@ const weatherForecast = (latitude, longitude, cb) => {
 
     axios.get(WEATHERBIT_URL).then(({ data }) => {
         const tempData = data.data[0];
-
-        cb(undefined, 'It is currently ' + tempData.temp + ' degree celcius. There is ' + tempData.precip + ' % chance of rain.');
+        cb(undefined, 'It is currently ' + tempData.temp + ' degree celcius. Weather is ' + tempData.weather.description);
     }).catch(err => {
         if (err.response) {
             /*
